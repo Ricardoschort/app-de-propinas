@@ -11,6 +11,47 @@
     <header class="py-4 bg-primary">
         <h1 class="text-center text-white fs-3">Calculadora de Consumos y Propinas</h1>
     </header>
+    <section class="container d-flex">
+        <button type="button" class="btn btn-primary mt-4 m-auto" data-bs-toggle="modal" data-bs-target="#idModal">
+            agregar nuevo
+          </button>
+          
+          <!-- Modal -->
+          <div class="modal fade" id="idModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Agregar Propina</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form id="form">
+                        <label for="mesa">Mesa: </label>
+                        <input class="me-4" id="mesa" type="text" name="mesa">
+                        <label for="hora">Hora: </label>
+                        <input id="hora" type="time" name="hora">
+                  </form>
+                </div>
+                <div class="modal-footer mt-4">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                  <button type="button" class="btn btn-primary" id="guardar">Guardar cambios</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+    </section>
+    <main id="platillos" class="bg-light container mt-5 p-4 d-none">
+        <h2 class="text center my-4">Platillos</h2>
+        <div class="contenido"></div>
+
+    </main>
+    <section id="resumen" class="resumen bg-light container mt-5 p-4 d-none">
+        <h2 class="text center my-4">Resumen</h2>
+        <div class="contenido row">
+            <p class="text-center">agrega los elementos del pedido</p>
+        </div>
+    </section>
 
     
     <script src="js/bootstrap.bundle.min.js"></script>
